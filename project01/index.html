@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Life Figure-Outer Application</title>
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<script type="text/javascript">
+	function empty(txtArea){
+		if(txtArea.value.length == 0){
+			alert("Surely you feel something!");
+			return false;
+		}
+		return true;
+	}
+</script>
+
+</head>
+
+<body>
+<center>
+<div class="main">
+	
+    <div class="top">
+    	<h1>The Magic Life Figure-Outer!</h1>
+    	Figuring out your life for you, so you don't have to...
+    </div>
+    
+    <div class="nav">
+    	<a>Home
+        	<span>"Home is a place you grow up wanting to leave, and grow old wanting to get back to."<br /><i>-John Ed Pearce</i></span>
+        </a>
+        <a>Interests
+        	<span>"Conscience whispers, but interest screams aloud."<br /><i>-J. Petit-Senn</i></span>
+        </a>
+        <a>Health
+        	<span>"Life expectancy would grow by leaps and bounds if green vegetables smelled as good as bacon."<br /><i>-Doug Larson</i></span>
+        </a>
+        <a>Academic
+        	<span>"To the uneducated, an A is just three sticks."<br /><i>-A.A. Milne</i></span>
+        </a>
+        <a>Professional
+        	<span>"If a trainstation is where the train stops, what's a workstation?"<br /><i>Author Unknown</i></span>
+        </a>
+        <a>Fun
+        	<span>"Eagles may soar in the clouds, but weasels never get sucked into jet engines."<br /><i>-Jason Hutchison and John Benfield</i></span>
+        </a> 
+        <a>Evil
+        	<span>"One does evil enough when one does nothing good."<br /><i>German Proverb</i></span>
+        </a>
+    </div>
+    
+    <div class="txt">
+    	<div class="blue">
+            <h3>Current Progress in Life</h3>
+            Mediocre. You really should enjoy life more.
+        </div>
+		<h2>Lorem Ipsum Dolor Sit Amet.</h2>
+        <table border="0" cellspacing="0" cellpadding="0"><form>
+        	<tr><td valign="top">How do you feel today?</td><td valign="top"><input type="text" id="feelings" /></td></tr>
+            <tr><td valign="top">How would you like to feel?<br />(choose all that apply)</td>
+            	<td valign="top"><select size="4">
+                	<option>Comfortably numb</option>
+                    <option>Grumpy as poop, you jerk</option>
+                    <option>Happy like I'm on controlled substances</option>
+                    <option>Normal. Absolutely Normal.</option>
+                    </select></td></tr>
+           <tr><td></td><td valign="top"><input type="button" value="Feel me!" onclick="empty(document.getElementById('feelings'))"/></td></tr></form>
+        </table>
+    </div>
+    
+    <div class="footer">
+    	&copy; 2011 Borg-Like Monstrosity of Mind Control, Inc. All Rights reserved.
+    </div>
+
+</div>
+</center>
+</body>
+</html>
