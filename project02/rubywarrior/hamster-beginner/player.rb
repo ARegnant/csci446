@@ -10,7 +10,9 @@ class Player
 		warrior.rest!
 	end
     else
-	if warrior.health > 15 or @health > warrior.health
+	if warrior.feel.captive?
+		warrior.rescue!
+	elsif warrior.health > 15 or @health > warrior.health
 		warrior.attack!
 	else
 		warrior.rest!
