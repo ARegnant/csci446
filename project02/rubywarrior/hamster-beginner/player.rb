@@ -16,7 +16,9 @@ class Player
 		else
 			warrior.walk! :forward
 		end
-	end	
+	end
+    elsif warrior.feel.wall?
+	warrior.pivot!	
     else
 	if warrior.feel.captive?
 		warrior.rescue!
