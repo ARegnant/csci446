@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body{
+	background:#FFF;
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+h1{
+	font-size:36px;
+	text-align:center;
+}
+h1 span{
+	font-size:18px;
+	font-weight:normal;
+}
+
+h2{
+	font-size:24px;
+}
+
+h2 span{
+	float:right;
+	font-size:14px;
+	font-weight:normal;
+}
+
+
+
+#data{
+	overflow:scroll;
+	max-height:200px;
+	overflow-x:hidden;
+	width:680px;
+	border:1px solid #000;
+}
+
+#dwrap{
+	min-width:60px;
+	overflow:auto;
+}
+
+#dwrap #tp{
+	background:#999;
+	border-top:1px solid #000;
+	border-left:1px solid #000;
+	font-weight:bold;
+	padding-top:2px;
+	text-align:center;
+}
+
+#dwrap #e{
+	background:#CCC;
+}
+#dwrap #o{
+	background:#FFF;
+}
+
+
+#dwrap .title {
+	width: 100px;
+	height: 20px;
+	float: left;
+}
+#dwrap .author {
+	width: 100px;
+	height: 20px;
+	float: left;
+	border-left:1px solid #000;
+}
+#dwrap .body {
+	width: 300px;
+	height: 20px;
+	float: left;
+	border-left:1px solid #000;
+}
+#dwrap .date {
+	width: 100px;
+	height: 20px;
+	float: left;
+	border-left:1px solid #000;
+	border-right:1px solid #000;
+}
+#dwrap .btn {
+	width: 20px;
+	height: 20px;
+	float: left;
+}
