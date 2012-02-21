@@ -14,9 +14,9 @@
         <div class="author"><%= article.author %></div>
         <div class="body"><%= article.body %></div>
         <div class="date"><%= article.created_at.strftime("%a. %b. %d, %Y") %></div>
-        <div class="btn"><%= link_to (article) do %> <img src="icons/magnifier.png" /> <% end %></div>
-        <div class="btn"><%= link_to (edit_article_path(article)) do %> <img src="icons/note_edit.png" /> <% end %></div>
-        <div class="btn"><%= link_to (article, :confirm => 'Are you sure?', :method => :delete) do %> <img src="icons/delete.png" /> <% end %></div>
+        <div class="btn"><%= link_to (article) do %> <%= image_tag "icons/magnifier.png" %><span id="tt">View</span> <% end %></div>
+        <div class="btn"><%= link_to (edit_article_path(article)) do %> <%= image_tag "icons/note_edit.png" %><span id="tt">Edit</span> <% end %></div>
+        <div class="btn"><%= link_to (article, :confirm => 'Are you sure?', :method => :delete) do %> <%= image_tag "icons/delete.png" %><span id="tt">Delete</span> <% end %></div>
     </div>
 <% end %>
 

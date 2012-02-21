@@ -1,7 +1,8 @@
 <p id="notice"><%= notice %></p>
-<%= link_to 'Back', articles_path %> | 
+<%= link_to (articles_path) do %> <%= image_tag "icons/arrow_left.png" %><span id="tt">Back to Articles</span> <% end %>
+<%= link_to (edit_article_path(@article)) do %> <%= image_tag "icons/note_edit.png" %><span id="tt">Edit</span> <% end %>
+<%= link_to (@article, :confirm => 'Are you sure?', :method => :delete) do %> <%= image_tag "icons/delete.png" %><span id="tt">Delete</span> <% end %>
 
-<%= link_to 'Edit', edit_article_path(@article) %> | <%= link_to 'Destroy', @article, :confirm => 'Are you sure?', :method => :delete %>
 
 <h2><%= @article. title %></h2>
 
