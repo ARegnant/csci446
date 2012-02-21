@@ -1,4 +1,8 @@
-<h2>All the World's Articles<span><%= link_to 'New Article', new_article_path %></span></h2>
+<% content_for :subtitle do %>
+	... with a name .com hipsters love!
+<% end %>
+
+<h2>All the World's Articles<span><%= link_to (new_article_path) do %> <%= image_tag "icons/new.png" %><span id="tt">New Article</span> <% end %></span></h2>
 
 <div id="dwrap">
 	<div class="title" id="tp">Title</div>

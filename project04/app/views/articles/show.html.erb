@@ -1,3 +1,7 @@
+<% content_for :subtitle do %>
+	... what's "Articl" in Spanish anyway?
+<% end %>
+
 <p id="notice"><%= notice %></p>
 <%= link_to (articles_path) do %> <%= image_tag "icons/arrow_left.png" %><span id="tt">Back to Articles</span> <% end %>
 <%= link_to (edit_article_path(@article)) do %> <%= image_tag "icons/note_edit.png" %><span id="tt">Edit</span> <% end %>
