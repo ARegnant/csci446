@@ -1,0 +1,26 @@
+<h2>All the World's Articles<span><%= link_to 'New Article', new_article_path %></span></h2>
+
+<div id="dwrap">
+	<div class="title" id="tp">Title</div>
+	<div class="author" id="tp">Author</div>
+	<div class="body" id="tp">Body</div>
+	<div class="date" id="tp">Date</div>
+</div>
+<div id="data">
+
+<% @articles.each do |article| %>
+    <div id="dwrap">
+        <div class="title" id="e"><%= article.title %></div>
+        <div class="author" id="e"><%= article.author %></div>
+        <div class="body" id="e"><%= article.body %></div>
+        <div class="date" id="e">date</div>
+        <div class="btn"><%= link_to 'Show', article %></div>
+        <div class="btn"><%= link_to 'Edit', edit_article_path(article) %></div>
+        <div class="btn"><%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %></div>
+    </div>
+<% end %>
+
+</div>
+
+<br /><img src="icons/application_view_list.png" /> ### articles
+
