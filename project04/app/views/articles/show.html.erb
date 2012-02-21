@@ -10,7 +10,7 @@
 
 <h2><%= @article. title %></h2>
 
-by <%= @article.author %>, # edits since <%= @article.created_at.strftime("%b. %d, %Y") %>
+by <%= @article.author %>, <%= @article.created_at.strftime("%b. %d, %Y") %>
 
 <p>
   <%= @article.body %>
