@@ -9,18 +9,18 @@
 <div id="data">
 
 <% @articles.each do |article| %>
-    <div id="dwrap">
-        <div class="title" id="e"><%= article.title %></div>
-        <div class="author" id="e"><%= article.author %></div>
-        <div class="body" id="e"><%= article.body %></div>
-        <div class="date" id="e">date</div>
-        <div class="btn"><%= link_to 'Show', article %></div>
-        <div class="btn"><%= link_to 'Edit', edit_article_path(article) %></div>
-        <div class="btn"><%= link_to 'Destroy', article, :confirm => 'Are you sure?', :method => :delete %></div>
+    <div id="dwrap" style="background:<%= cycle('#CCC', '#FFF') %>">
+        <div class="title"><%= article.title %></div>
+        <div class="author"><%= article.author %></div>
+        <div class="body"><%= article.body %></div>
+        <div class="date"><%= article.created_at.strftime("%a. %b. %d, %Y") %></div>
+        <div class="btn"><%= link_to (article) do %> <img src="icons/magnifier.png" /> <% end %></div>
+        <div class="btn"><%= link_to (edit_article_path(article)) do %> <img src="icons/note_edit.png" /> <% end %></div>
+        <div class="btn"><%= link_to (article, :confirm => 'Are you sure?', :method => :delete) do %> <img src="icons/delete.png" /> <% end %></div>
     </div>
 <% end %>
 
 </div>
 
-<br /><img src="icons/application_view_list.png" /> ### articles
+<br /><img src="icons/application_view_list.png" /> <%= pluralize(@articles.count, "article") %> 
 

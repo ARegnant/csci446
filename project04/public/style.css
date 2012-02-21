@@ -31,7 +31,7 @@ h2 span{
 	overflow:scroll;
 	max-height:200px;
 	overflow-x:hidden;
-	width:680px;
+	width:829px;
 	border:1px solid #000;
 }
 
@@ -49,40 +49,48 @@ h2 span{
 	text-align:center;
 }
 
-#dwrap #e{
+#dwrape{
 	background:#CCC;
 }
-#dwrap #o{
+#dwrapo{
 	background:#FFF;
 }
 
 
-#dwrap .title {
-	width: 100px;
+.title {
+	width: 150px;
 	height: 20px;
 	float: left;
+	background:transparent;
+	overflow:hidden;
 }
-#dwrap .author {
-	width: 100px;
+.author {
+	width: 150px;
 	height: 20px;
 	float: left;
 	border-left:1px solid #000;
+	background:transparent;
+	overflow:hidden;
 }
-#dwrap .body {
+.body {
 	width: 300px;
 	height: 20px;
 	float: left;
 	border-left:1px solid #000;
+	overflow:hidden;
+	background:transparent;
 }
-#dwrap .date {
-	width: 100px;
+.date {
+	width: 150px;
 	height: 20px;
 	float: left;
 	border-left:1px solid #000;
 	border-right:1px solid #000;
+	background:transparent;
 }
-#dwrap .btn {
+.btn {
 	width: 20px;
 	height: 20px;
 	float: left;
+	background:#FFF;
 }
