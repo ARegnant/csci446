@@ -1,0 +1,10 @@
+<% content_for :subtitle do %>
+	... not just for the country of Spain
+<% end %>
+
+<%= link_to (articles_path) do %> <%= image_tag "icons/arrow_left.png" %><span id="tt">Back to Articles</span> <% end %>
+
+<h2>Creating a New Article</h2>
+
+<%= render 'form' %>
+

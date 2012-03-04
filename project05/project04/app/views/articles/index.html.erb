@@ -1,0 +1,30 @@
+<% content_for :subtitle do %>
+	... with a name .com hipsters love!
+<% end %>
+
+<h2>All the World's Articles<span><%= link_to (new_article_path) do %> <%= image_tag "icons/new.png" %><span id="tt">New Article</span> <% end %></span></h2>
+
+<div id="dwrap">
+	<div class="title" id="tp">Title</div>
+	<div class="author" id="tp">Author</div>
+	<div class="body" id="tp">Body</div>
+	<div class="date" id="tp">Date</div>
+</div>
+<div id="data">
+
+<% @articles.each do |article| %>
+    <div id="dwrap" style="background:<%= cycle('#CCC', '#FFF') %>">
+        <div class="title"><%= article.title %></div>
+        <div class="author"><%= article.author %></div>
+        <div class="body"><%= article.body %></div>
+        <div class="date"><%= article.created_at.strftime("%a. %b. %d, %Y") %></div>
+        <div class="btn"><%= link_to (article) do %> <%= image_tag "icons/magnifier.png" %><span id="tt">View</span> <% end %></div>
+        <div class="btn"><%= link_to (edit_article_path(article)) do %> <%= image_tag "icons/note_edit.png" %><span id="tt">Edit</span> <% end %></div>
+        <div class="btn"><%= link_to (article, :confirm => 'Are you sure?', :method => :delete) do %> <%= image_tag "icons/delete.png" %><span id="tt">Delete</span> <% end %></div>
+    </div>
+<% end %>
+
+</div>
+
+<br /><img src="icons/application_view_list.png" /> <%= pluralize(@articles.count, "article") %> 
+
