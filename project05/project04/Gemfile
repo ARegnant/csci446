@@ -39,3 +39,5 @@ gem 'jquery-rails'
 # gem 'ruby-debug'
 
 gem 'will_paginate', '>= 3.0.pre'
+
+gem 'paperclip'

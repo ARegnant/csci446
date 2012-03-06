@@ -1,0 +1,7 @@
+<h1>Authors Admin</h1>
+
+<% @authors.each do |author| %>
+<div class="entry">
+	<%= image_tag(author.image_url) %>
+	<%= author.name %>
+</div>

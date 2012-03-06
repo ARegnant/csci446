@@ -1,0 +1,15 @@
+
+<p id="notice"><%= notice %></p>
+<%= link_to (authors_path) do %> <%= image_tag "icons/arrow_left.png" %><span id="tt">Back to Authors</span> <% end %>
+<%= link_to (edit_author_path(@author)) do %> <%= image_tag "icons/note_edit.png" %><span id="tt">Edit</span> <% end %>
+<%= link_to (@author, :confirm => 'Are you sure?', :method => :delete) do %> <%= image_tag "icons/delete.png" %><span id="tt">Delete</span> <% end %>
+
+
+<h2><%= @author. name %></h2>
+
+<%= image_tag @author.photo.url() %>
+
+
+
+
+
