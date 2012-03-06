@@ -4,27 +4,29 @@
 
 <h2>All the World's Articles<span><%= link_to (new_article_path) do %> <%= image_tag "icons/new.png" %><span id="tt">New Article</span> <% end %></span></h2>
 
-<div id="dwrap">
-	<div class="title" id="tp">Title</div>
-	<div class="author" id="tp">Author</div>
-	<div class="body" id="tp">Body</div>
-	<div class="date" id="tp">Date</div>
-</div>
-<div id="data">
-
+<table>
+	<tr style="background:#999;">
+		<td style="border:1px solid #000;color:#fff;width:100px;">Title</td>
+		<td style="border:1px solid #000;color:#fff;width:100px;">Author</td>
+		<td style="border:1px solid #000;color:#fff;width:300px;">Body</td>
+		<td style="border:1px solid #000;color:#fff;width:100px;">Date</td>
+		<td></td>
+	</tr>
+	
 <% @articles.each do |article| %>
-    <div id="dwrap" style="background:<%= cycle('#CCC', '#FFF') %>">
-        <div class="title"><%= article.title %></div>
-        <div class="author"><%= article.author %></div>
-        <div class="body"><%= article.body %></div>
-        <div class="date"><%= article.created_at.strftime("%a. %b. %d, %Y") %></div>
-        <div class="btn"><%= link_to (article) do %> <%= image_tag "icons/magnifier.png" %><span id="tt">View</span> <% end %></div>
-        <div class="btn"><%= link_to (edit_article_path(article)) do %> <%= image_tag "icons/note_edit.png" %><span id="tt">Edit</span> <% end %></div>
-        <div class="btn"><%= link_to (article, :confirm => 'Are you sure?', :method => :delete) do %> <%= image_tag "icons/delete.png" %><span id="tt">Delete</span> <% end %></div>
-    </div>
+	<tr style="background:<%= cycle('#CCC', '#FFF') %>">
+        	<td style="border:1px solid #000;width:100px;overflow:hidden;"><%= article.title %></td>
+        	<td style="border:1px solid #000;width:100px;overflow:hidden;"><%= article.author %></td>
+        	<td style="border:1px solid #000;width:100px;overflow:hidden;"><%= article.body %></td>
+       		<td style="border:1px solid #000;width:100px;overflow:hidden;"><%= article.created_at.strftime("%a. %b. %d, %Y") %></td>
+        	<td width="20"><%= link_to (article) do %> <%= image_tag "icons/magnifier.png" %><span id="tt">View</span> <% end %></td>
+        	<td width="20"><%= link_to (edit_article_path(article)) do %> <%= image_tag "icons/note_edit.png" %><span id="tt">Edit</span> <% end %></td>
+        	<td width="20"><%= link_to (article, :confirm => 'Are you sure?', :method => :delete) do %> <%= image_tag "icons/delete.png" %><span id="tt">Delete</span> <% end %></td>
+    	</tr>
 <% end %>
 
-</div>
+</table>
 
-<br /><img src="icons/application_view_list.png" /> <%= pluralize(@articles.count, "article") %> 
+<br /><img src="icons/application_view_list.png" /> <%= pluralize(@articles.count, "article") %><br /><br />
+<%= will_paginate @articles %>
 
