@@ -1,0 +1,88 @@
+Kelsey Kopecky
+Web Apps Midterm
+
+
+ARCHITECTURE
+
+1. POST sends data to a URL while PUT puts a page a URL.
+
+2. Relative
+
+3. An absolute URL points directly to a file (such as "http://www.website.com/site/index.html"), while a relative URL points to something in the current directory (such as "../site/index.html").
+
+4. GET
+
+5. The query string is request_type=PUT.
+
+6. Title
+
+7. Database: storage.
+Web Browser: renders the application (makes it executable).
+
+8. No, it doesn't have a content type.
+
+
+RUBY
+
+9. class Troll
+	attr_accessor :ugliness
+	attr_accessor :smelliness
+	attr_accessor :strength
+	def initialize(g = "UNGAH")
+		grunt = g
+	end
+	def speak()
+		42.time do
+			puts grunt
+		end
+	end
+	def reverse()
+		return grunt.reverse
+	end
+	def self.propogate()
+		return Troll("eegah")
+	end
+end
+
+10. All it's missing is the method fight:
+def fight()
+end
+
+11. Yes, because it can respond to (pardon the receptive like answer) anything.
+
+12. Boolean (true/false)
+
+13. A method that ends in ! will modify the object it calls.
+
+14. It's a dynamic type system.
+
+15. Array of strings with the members being "master", "rails", "and", etc.
+
+16. Yep!
+
+17. No. It will return NILL.
+
+
+RAILS
+
+18. save, valid, validate, create
+
+19. HTTP METHOD     |     CONTROLLER ACTION     |     CRUD OPERATION
+      GET                      index                      read
+      GET                      new                        read
+      POST                     create                     create
+      GET                      edit                       read
+      PUT                      update                     update
+      DELETE                   delete                     delete
+
+20. Browsers have a restriction that you can only use POST or GET.
+
+21. Production is used to let others use your application. Development is used for you to use your application (local).
+
+22. Nonplural controllers are used to display things, while plural are used to edit a database.
+
+23. Helper methods are methods that can be called in your views so the views are easy to read and there is no duplicate code. These should be defined by the developer if the method will be used multiple times.
+
+24. id, has_many, belongs_to
+
+25. A way to reduce the number of queries is by using eager loading for Flower.find().
