@@ -21,12 +21,11 @@ function populateHighScores(scores) {
 }
 
 function updateScore(score) {
-  $('h2#score span#guessesLeft').append(score);
+	$('h2#score span#guessesLeft').text("");
+  $('h2#score span#guessesLeft').text(score);
 }
 
 function yourGuess() {
-	guessesLeft = guessesLeft - 1;
-	updateScore(guessesLeft);
     var guess = document.getElementById("guess").value;
     var guesses = document.getElementById("output");
 	
@@ -37,8 +36,12 @@ function yourGuess() {
 			guesses.innerText = "You have guessed correctly!";
 		} else if (guess > numToGuess) {
 			guesses.innerText = "You guessing too high!";
+			guessesLeft = guessesLeft - 1;
+			updateScore(guessesLeft);
 		} else {
 			guesses.innerText = "You guessing too low!";
+			guessesLeft = guessesLeft - 1;
+			updateScore(guessesLeft);
 		}
 	}
 }
