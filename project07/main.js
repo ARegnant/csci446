@@ -22,8 +22,12 @@ function populateHighScores(scores) {
 }
 
 function updateScore(score) {
-	$('h2#score span#guessesLeft').text("");
-  $('h2#score span#guessesLeft').text(score);
+	$('h2#score').text("");
+	if (score == 1) {
+		$('h2#score').text(score + " guess left");
+	} else {
+		$('h2#score').text(score + " guesses left");
+	}
 }
 
 function addScore(){
@@ -42,7 +46,7 @@ function yourGuess() {
 	} else if (guessesLeft == 1) {
 		guessesLeft = 0;
 		updateScore(guessesLeft);
-		guesses.innerText = "YOU LOOSE";
+		guesses.innerText = "YOU LOSE";
 		document.getElementById('guess').style.display="none";
 		document.getElementById('submit').style.display="none";
 		document.getElementById('new').style.display="block";
