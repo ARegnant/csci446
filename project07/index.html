@@ -13,14 +13,14 @@
 <p class="subtitle">Fool! You have followed a link here and now your life depends on guessing my magic number!</p>
 <p>Between 1 and 100! Because it is magic!</p>
 <h2 id="score"><span id="guessesLeft"></span> Guesses Left</h2>
-<!--<form id="guessTheNumber" name="guessTheNumber">
-  <input type="text" size="3" name="guess" id="guess">
-  <br>
-  <input type="button" id="btnGuess" value="Guess!" onClick="yourGuess()">
-</form>-->
-<h2 id="output"></h2>
- <input type="text" id="guess" size="3"/><br />
- <input type="button" onclick="yourGuess()" value="Guess!" /><br />
+<h3 id="output"></h3>
+<form id="newScore" style="display:none;">
+Name: <input type="text" id="name" /><br />
+<input type="button" onclick="addScore()" value="Submit your High Score!" />
+</form>
+<input type="button" id="new" value="New Game!" style="display:none;" onclick="location.reload(true)" />
+<input type="text" id="guess" size="3"/><br />
+<input type="button" onclick="yourGuess()" id="submit" value="Guess!" /><br />
  <input id="cheat" type="checkbox" value="cheat" onclick="showNumberToGuess()" />
  <label for="cheat">Cheat</label>
  <div id="cheatShow" style="display: none;">

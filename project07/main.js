@@ -15,6 +15,7 @@ function generateNumberToGuess(confirmIt) {
 }
 
 function populateHighScores(scores) {
+	$('div#highScores').text("");
   for (var i = 0; i < scores.length; ++i) {
     $('div#highScores').append("<p>" + scores[i][0] + " " + scores[i][1] + "</p>");
   }
@@ -25,21 +26,41 @@ function updateScore(score) {
   $('h2#score span#guessesLeft').text(score);
 }
 
+function addScore(){
+	highScores.push([guessesLeft,document.getElementById("name").value]);
+	populateHighScores(highScores);
+	document.getElementById('newScore').style.display="none";
+	document.getElementById('output').style.display="none";
+}
+
 function yourGuess() {
     var guess = document.getElementById("guess").value;
     var guesses = document.getElementById("output");
 	
 	if (isNaN(guess) || guess == "" || guess == " "){
 		guesses.innerText = "Bad input!";
+	} else if (guessesLeft == 1) {
+		guessesLeft = 0;
+		updateScore(guessesLeft);
+		guesses.innerText = "YOU LOOSE";
+		document.getElementById('guess').style.display="none";
+		document.getElementById('submit').style.display="none";
+		document.getElementById('new').style.display="block";
 	} else {
 		if (guess == numToGuess) {
-			guesses.innerText = "You have guessed correctly!";
+			guesses.innerText = "CORRECT";
+			guessesLeft = guessesLeft - 1;
+			updateScore(guessesLeft);
+			document.getElementById('guess').style.display="none";
+			document.getElementById('submit').style.display="none";
+			document.getElementById('new').style.display="block";
+			document.getElementById('newScore').style.display="block";
 		} else if (guess > numToGuess) {
-			guesses.innerText = "You guessing too high!";
+			guesses.innerText = "Too High!";
 			guessesLeft = guessesLeft - 1;
 			updateScore(guessesLeft);
 		} else {
-			guesses.innerText = "You guessing too low!";
+			guesses.innerText = "Too Low!";
 			guessesLeft = guessesLeft - 1;
 			updateScore(guessesLeft);
 		}
@@ -54,4 +75,8 @@ function showNumberToGuess() {
         document.getElementById('numberToGuess').value = '';
         document.getElementById('cheatShow').style.display = 'none';
     }
+}
+
+function newGame(){
+	generateNumberToGuess();
 }

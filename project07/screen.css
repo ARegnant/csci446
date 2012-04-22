@@ -5,7 +5,7 @@ body {
   text-align: center;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: 'Nosifer', cursive;
   color: #A39480;
 }
@@ -25,6 +25,12 @@ h2#score {
   color: #FFC125;
   margin: 0px;
 }
+
+h3 {
+	color:#F96;
+	font-size: 4em;
+}
+	
 
 input#guess {
   font-size: 8em;
